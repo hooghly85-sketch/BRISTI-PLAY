@@ -196,3 +196,11 @@ cursor:pointer;
 color:#e50914;
 text-decoration:none;
 }
+#movieList{
+margin-top:20px;
+}
+
+#movieList .movie-card{
+margin-bottom:20px;
+padding:10px;
+}
