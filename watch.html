@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Watch - BRISTI PLAY</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+🎬 BRISTI PLAY
+</div>
+
+<ul class="menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="movies.html">Movies</a></li>
+<li><a href="series.html">Series</a></li>
+<li><a href="mylist.html">My List</a></li>
+</ul>
+
+</header>
+
+<section style="padding:30px;">
+
+<h1 id="movieTitle">Now Playing</h1>
+
+<video
+id="watchPlayer"
+controls
+autoplay
+width="100%"
+poster="images/poster1.jpg">
+
+<source src="videos/video1.mp4" type="video/mp4">
+
+Your browser does not support HTML5 video.
+
+</video>
+
+<br><br>
+
+<h2>Description</h2>
+
+<p id="description">
+Welcome to BRISTI PLAY. Enjoy your favorite movie in HD quality.
+</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 BRISTI PLAY | Bristi Motion Pictures</p>
+
+</footer>
+
+<script>
+
+const params=new URLSearchParams(window.location.search);
+
+const video=params.get("video");
+const title=params.get("title");
+
+if(video){
+
+document.getElementById("watchPlayer").src=video;
+
+}
+
+if(title){
+
+document.getElementById("movieTitle").innerText=title;
+
+}
+
+</script>
+
+</body>
+</html>
