@@ -135,45 +135,41 @@ function showMovies(){
 
 let movies=JSON.parse(localStorage.getItem("movies"))||[];
 
-let output="";
+function showMovies() {
+    let movies = JSON.parse(localStorage.getItem("movies")) || [];
 
-movies.forEach(function(movie,index){
+    let output = "";
 
-output+=`
-<div class="movie-card">
-<img src="${movie.poster}">
-<h3>${movie.title}</h3>
-<p>${movie.description}</p>
-<button onclick="deleteMovie(${index})">Delete</button>
-</div>
-`;
+    movies.forEach(function (movie, index) {
+        output += `
+        <div class="movie-card">
+            <img src="${movie.poster}">
+            <h3>${movie.title}</h3>
+            <p>${movie.description}</p>
+            <button onclick="deleteMovie(${index})">Delete</button>
+        </div>
+        `;
+    });
 
-});
+    let list = document.getElementById("movieList");
 
-let list=document.getElementById("movieList");
-
-if(list){
-list.innerHTML=output;
-}
-
-}
-
-function deleteMovie(index){
-
-let movies=JSON.parse(localStorage.getItem("movies"))||[];
-
-movies.splice(index,1);
-
-localStorage.setItem("movies",JSON.stringify(movies));
-
-showMovies();
-
-}
-
-window.onload=function(){
-
-if(document.getElementById("movieList")){
-showMovies();
-}
-
+    if (list) {
+        list.innerHTML = output;
     }
+}
+
+function deleteMovie(index) {
+    let movies = JSON.parse(localStorage.getItem("movies")) || [];
+
+    movies.splice(index, 1);
+
+    localStorage.setItem("movies", JSON.stringify(movies));
+
+    showMovies();
+}
+
+window.onload = function () {
+    if (document.getElementById("movieList")) {
+        showMovies();
+    }
+};
