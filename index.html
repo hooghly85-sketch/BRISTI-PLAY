@@ -1,14 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BRISTI PLAY</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>🎬 BRISTI PLAY</h1>
+<header class="navbar">
+
+<div class="logo">
+🎬 BRISTI PLAY
+</div>
+
+<ul class="menu">
+<li><a href="#">Home</a></li>
+<li><a href="#">Movies</a></li>
+<li><a href="#">Series</a></li>
+<li><a href="#">My List</a></li>
+</ul>
+
+<input type="text" placeholder="Search..." class="search">
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>AKTU DOYA</h1>
+
+<p>
+Sometimes a little kindness can change a life.
+</p>
+
+<button onclick="playVideo('videos/video1.mp4')">
+▶ Watch Now
+</button>
+
+</div>
+
+</section>
+
+<section class="latest">
+
+<h2>Latest Movies</h2>
+
+<div class="movie-row">
+
+<div class="movie-card">
+
+<img src="images/poster1.jpg">
+
+<h3>AKTU DOYA</h3>
+
+<button onclick="playVideo('videos/video1.mp4')">
+▶ Play
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="player">
+
+<video
+id="player"
+controls>
+</video>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 BRISTI PLAY | Bristi Motion Pictures
+</p>
+
+</footer>
 
 <script src="script.js"></script>
 
 </body>
-</html>
+  </html>
