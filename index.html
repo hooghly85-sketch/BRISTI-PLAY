@@ -1,44 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>BRISTI PLAY</title>
 
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
 <header class="navbar">
 
-<div class="logo">
-🎬 BRISTI PLAY
-</div>
+<div class="logo">🎬 BRISTI PLAY</div>
 
 <nav>
-
 <ul class="menu">
-
 <li><a href="index.html">Home</a></li>
-
 <li><a href="movies.html">Movies</a></li>
-
 <li><a href="series.html">Series</a></li>
-
 <li><a href="mylist.html">My List</a></li>
-
 </ul>
-
 </nav>
 
-<input
-type="text"
-class="search"
-placeholder="Search Movies...">
+<input type="text" class="search" placeholder="Search Movies...">
 
 </header>
 
@@ -52,7 +38,7 @@ placeholder="Search Movies...">
 Watch Exclusive Movies & Series Only On BRISTI PLAY
 </p>
 
-<button onclick="playVideo('videos/video1.mp4')">
+<button onclick="window.location='watch.html?title=AKTU%20DOYA&video=videos/video1.mp4'">
 ▶ Watch Now
 </button>
 
@@ -68,48 +54,63 @@ Watch Exclusive Movies & Series Only On BRISTI PLAY
 
 <div class="movie-card">
 
-<img src="images/poster1.jpg" alt="Movie">
+<img src="images/poster1.jpg" alt="AKTU DOYA">
 
 <h3>AKTU DOYA</h3>
 
-<button onclick="playVideo('videos/video1.mp4')">
+<button onclick="window.location='watch.html?title=AKTU%20DOYA&video=videos/video1.mp4'">
 ▶ Play
+</button>
+
+<button onclick="addToMyList('AKTU DOYA')">
+❤️ My List
 </button>
 
 </div>
 
 <div class="movie-card">
 
-<img src="images/poster2.jpg" alt="Movie">
+<img src="images/poster2.jpg" alt="Behind You">
 
 <h3>Behind You</h3>
 
-<button onclick="playVideo('videos/video2.mp4')">
+<button onclick="window.location='watch.html?title=Behind%20You&video=videos/video2.mp4'">
 ▶ Play
 </button>
 
-</div>
+<button onclick="addToMyList('Behind You')">
+❤️ My List
+</button>
 
+</div>
 <div class="movie-card">
 
-<img src="images/poster3.jpg" alt="Movie">
+<img src="images/poster3.jpg" alt="Night Fear">
 
 <h3>Night Fear</h3>
 
-<button onclick="playVideo('videos/video3.mp4')">
+<button onclick="window.location='watch.html?title=Night%20Fear&video=videos/video3.mp4'">
 ▶ Play
+</button>
+
+<button onclick="addToMyList('Night Fear')">
+❤️ My List
 </button>
 
 </div>
 
 <div class="movie-card">
 
-<img src="images/poster4.jpg" alt="Movie">
+<img src="images/poster4.jpg" alt="Dark World">
 
 <h3>Dark World</h3>
 
-<button onclick="playVideo('videos/video4.mp4')">
+<button onclick="window.location='watch.html?title=Dark%20World&video=videos/video4.mp4'">
 ▶ Play
+</button>
+
+<button onclick="addToMyList('Dark World')">
+❤️ My List
 </button>
 
 </div>
@@ -117,6 +118,7 @@ Watch Exclusive Movies & Series Only On BRISTI PLAY
 </div>
 
 </section>
+
 <section class="continue">
 
 <h2>▶ Continue Watching</h2>
@@ -124,52 +126,56 @@ Watch Exclusive Movies & Series Only On BRISTI PLAY
 <div class="movie-row">
 
 <div class="movie-card">
-<img src="images/poster5.jpg" alt="Movie">
+
+<img src="images/poster5.jpg" alt="Action Movie">
+
 <h3>Action Movie</h3>
-<button onclick="playVideo('videos/video5.mp4')">
+
+<button onclick="window.location='watch.html?title=Action%20Movie&video=videos/video5.mp4'">
 ▶ Continue
 </button>
+
 </div>
 
 <div class="movie-card">
-<img src="images/poster6.jpg" alt="Movie">
+
+<img src="images/poster6.jpg" alt="Romantic Story">
+
 <h3>Romantic Story</h3>
-<button onclick="playVideo('videos/video6.mp4')">
+
+<button onclick="window.location='watch.html?title=Romantic%20Story&video=videos/video6.mp4'">
 ▶ Continue
 </button>
+
 </div>
 
 <div class="movie-card">
-<img src="images/poster7.jpg" alt="Movie">
+
+<img src="images/poster7.jpg" alt="Comedy Night">
+
 <h3>Comedy Night</h3>
-<button onclick="playVideo('videos/video7.mp4')">
+
+<button onclick="window.location='watch.html?title=Comedy%20Night&video=videos/video7.mp4'">
 ▶ Continue
 </button>
+
 </div>
 
 <div class="movie-card">
-<img src="images/poster8.jpg" alt="Movie">
+
+<img src="images/poster8.jpg" alt="Horror House">
+
 <h3>Horror House</h3>
-<button onclick="playVideo('videos/video8.mp4')">
+
+<button onclick="window.location='watch.html?title=Horror%20House&video=videos/video8.mp4'">
 ▶ Continue
 </button>
+
 </div>
 
 </div>
 
 </section>
-
-<section class="player">
-
-<video
-id="player"
-controls
-width="100%">
-Your browser does not support HTML5 video.
-</video>
-
-</section>
-
 <footer>
 
 <p>© 2026 BRISTI PLAY | Bristi Motion Pictures</p>
@@ -177,11 +183,12 @@ Your browser does not support HTML5 video.
 <p>
 <a href="login.html">Login</a> |
 <a href="signup.html">Signup</a> |
-<a href="admin.html">Admin</a>
+<a href="admin.html">Admin Panel</a>
 </p>
 
 </footer>
 
 <script src="script.js"></script>
+
 </body>
     </html>
