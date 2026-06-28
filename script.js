@@ -100,3 +100,80 @@ function logout() {
     window.location = "login.html";
 
 }
+function addMovie(){
+
+let title=document.getElementById("movieTitle").value;
+let description=document.getElementById("movieDescription").value;
+let poster=document.getElementById("poster").value;
+let video=document.getElementById("video").value;
+
+if(title==""||description==""||poster==""||video==""){
+alert("Please fill all fields");
+return;
+}
+
+let movie={
+title:title,
+description:description,
+poster:poster,
+video:video
+};
+
+let movies=JSON.parse(localStorage.getItem("movies"))||[];
+
+movies.push(movie);
+
+localStorage.setItem("movies",JSON.stringify(movies));
+
+alert("Movie Added Successfully");
+
+showMovies();
+
+}
+
+function showMovies(){
+
+let movies=JSON.parse(localStorage.getItem("movies"))||[];
+
+let output="";
+
+movies.forEach(function(movie,index){
+
+output+=`
+<div class="movie-card">
+<img src="${movie.poster}">
+<h3>${movie.title}</h3>
+<p>${movie.description}</p>
+<button onclick="deleteMovie(${index})">Delete</button>
+</div>
+`;
+
+});
+
+let list=document.getElementById("movieList");
+
+if(list){
+list.innerHTML=output;
+}
+
+}
+
+function deleteMovie(index){
+
+let movies=JSON.parse(localStorage.getItem("movies"))||[];
+
+movies.splice(index,1);
+
+localStorage.setItem("movies",JSON.stringify(movies));
+
+showMovies();
+
+}
+
+window.onload=function(){
+
+if(document.getElementById("movieList")){
+showMovies();
+}
+
+    }
