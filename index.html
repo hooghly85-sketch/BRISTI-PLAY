@@ -1,21 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BRISTI PLAY</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
 <header class="navbar">
 
-    <div class="logo">
-        🎬 BRISTI PLAY
-    </div>
+<div class="logo">
+🎬 BRISTI PLAY
+</div>
 
-    <nav>
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="movies.html">Movies</a></li>
-            <li><a href="series.html">Series</a></li>
-            <li><a href="mylist.html">My List</a></li>
-        </ul>
-    </nav>
+<nav>
 
-    <input
-        type="text"
-        class="search"
-        placeholder="Search movies...">
+<ul class="menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="movies.html">Movies</a></li>
+
+<li><a href="series.html">Series</a></li>
+
+<li><a href="mylist.html">My List</a></li>
+
+</ul>
+
+</nav>
+
+<input
+type="text"
+class="search"
+placeholder="Search Movies...">
 
 </header>
+
+<section class="hero">
+
+<div class="overlay">
+
+<h1>AKTU DOYA</h1>
+
+<p>
+Watch Exclusive Movies & Series Only On BRISTI PLAY
+</p>
+
+<button onclick="playVideo('videos/video1.mp4')">
+▶ Watch Now
+</button>
+
+</div>
+
+</section>
+
+<section class="latest">
+
+<h2>🔥 Trending Movies</h2>
+
+<div class="movie-row">
+
+<div class="movie-card">
+
+<img src="images/poster1.jpg" alt="Movie">
+
+<h3>AKTU DOYA</h3>
+
+<button onclick="playVideo('videos/video1.mp4')">
+▶ Play
+</button>
+
+</div>
+
+<div class="movie-card">
+
+<img src="images/poster2.jpg" alt="Movie">
+
+<h3>Behind You</h3>
+
+<button onclick="playVideo('videos/video2.mp4')">
+▶ Play
+</button>
+
+</div>
+
+<div class="movie-card">
+
+<img src="images/poster3.jpg" alt="Movie">
+
+<h3>Night Fear</h3>
+
+<button onclick="playVideo('videos/video3.mp4')">
+▶ Play
+</button>
+
+</div>
+
+<div class="movie-card">
+
+<img src="images/poster4.jpg" alt="Movie">
+
+<h3>Dark World</h3>
+
+<button onclick="playVideo('videos/video4.mp4')">
+▶ Play
+</button>
+
+</div>
+
+</div>
+
+</section>
+<section class="continue">
+
+<h2>▶ Continue Watching</h2>
+
+<div class="movie-row">
+
+<div class="movie-card">
+<img src="images/poster5.jpg" alt="Movie">
+<h3>Action Movie</h3>
+<button onclick="playVideo('videos/video5.mp4')">
+▶ Continue
+</button>
+</div>
+
+<div class="movie-card">
+<img src="images/poster6.jpg" alt="Movie">
+<h3>Romantic Story</h3>
+<button onclick="playVideo('videos/video6.mp4')">
+▶ Continue
+</button>
+</div>
+
+<div class="movie-card">
+<img src="images/poster7.jpg" alt="Movie">
+<h3>Comedy Night</h3>
+<button onclick="playVideo('videos/video7.mp4')">
+▶ Continue
+</button>
+</div>
+
+<div class="movie-card">
+<img src="images/poster8.jpg" alt="Movie">
+<h3>Horror House</h3>
+<button onclick="playVideo('videos/video8.mp4')">
+▶ Continue
+</button>
+</div>
+
+</div>
+
+</section>
+
+<section class="player">
+
+<video
+id="player"
+controls
+width="100%">
+Your browser does not support HTML5 video.
+</video>
+
+</section>
+
+<footer>
+
+<p>© 2026 BRISTI PLAY | Bristi Motion Pictures</p>
+
+<p>
+<a href="login.html">Login</a> |
+<a href="signup.html">Signup</a> |
+<a href="admin.html">Admin</a>
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+</body>
+    </html>
