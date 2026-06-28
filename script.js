@@ -1,8 +1,13 @@
-// BRISTI PLAY - Script
+// ===============================
+// BRISTI PLAY - script.js
+// ===============================
 
+// Video Player
 const player = document.getElementById("player");
 
-function playVideo(video){
+function playVideo(video) {
+    if (!player) return;
+
     player.src = video;
     player.style.display = "block";
 
@@ -13,52 +18,85 @@ function playVideo(video){
     player.play();
 }
 
-// Search (Part 1)
+// Search
 const search = document.querySelector(".search");
 
-search.addEventListener("keyup", function(){
+if (search) {
 
-    let value = this.value.toLowerCase();
+    search.addEventListener("keyup", function () {
 
-    let movies = document.querySelectorAll(".movie-card");
+        let value = this.value.toLowerCase();
 
-    movies.forEach(function(movie){
+        let movies = document.querySelectorAll(".movie-card");
 
-        let title = movie.querySelector("h3").innerText.toLowerCase();
+        movies.forEach(function (movie) {
 
-        if(title.includes(value)){
-            movie.style.display = "block";
-        }else{
-            movie.style.display = "none";
-        }
+            let title = movie.querySelector("h3").innerText.toLowerCase();
+
+            if (title.includes(value)) {
+                movie.style.display = "block";
+            } else {
+                movie.style.display = "none";
+            }
+
+        });
 
     });
 
-});
-function login(){
-
-alert("Login Successful!");
-
-window.location="index.html";
-
-    }
-function signup(){
-
-let name=document.getElementById("name").value;
-let email=document.getElementById("email").value;
-let password=document.getElementById("password").value;
-
-if(name=="" || email=="" || password==""){
-alert("Please fill all fields");
-return;
 }
 
-localStorage.setItem("userName",name);
-localStorage.setItem("userEmail",email);
-localStorage.setItem("userPassword",password);
+// Signup
+function signup() {
 
-alert("Account Created Successfully!");
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
 
-window.location="login.html";
+    if (name == "" || email == "" || password == "") {
+
+        alert("Please fill all fields");
+        return;
+
+    }
+
+    localStorage.setItem("userName", name);
+    localStorage.setItem("userEmail", email);
+    localStorage.setItem("userPassword", password);
+
+    alert("Account Created Successfully!");
+
+    window.location = "login.html";
+
+}
+
+// Login
+function login() {
+
+    let email = document.querySelector("input[type=email]").value;
+    let password = document.querySelector("input[type=password]").value;
+
+    let savedEmail = localStorage.getItem("userEmail");
+    let savedPassword = localStorage.getItem("userPassword");
+
+    if (email === savedEmail && password === savedPassword) {
+
+        alert("Welcome to BRISTI PLAY");
+
+        window.location = "index.html";
+
+    } else {
+
+        alert("Invalid Email or Password");
+
+    }
+
+}
+
+// Logout
+function logout() {
+
+    alert("Logged Out");
+
+    window.location = "login.html";
 
 }
