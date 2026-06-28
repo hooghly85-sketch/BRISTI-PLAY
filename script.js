@@ -35,3 +35,10 @@ search.addEventListener("keyup", function(){
     });
 
 });
+function login(){
+
+alert("Login Successful!");
+
+window.location="index.html";
+
+    }
